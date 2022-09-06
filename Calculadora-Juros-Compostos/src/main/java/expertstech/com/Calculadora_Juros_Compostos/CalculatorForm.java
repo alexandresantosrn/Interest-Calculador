@@ -9,13 +9,13 @@ import javax.swing.JTextField;
 public abstract class CalculatorForm extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	protected JPanel pnlForm;
 	protected JPanel pnlRodape;
-	
+
 	protected JButton btnCalcular;
 	protected JButton btnLimpar;
-	protected JButton btnFechar;	
+	protected JButton btnFechar;
 
 	protected JLabel lblCapital;
 	protected JTextField txtCapital;
@@ -38,6 +38,29 @@ public abstract class CalculatorForm extends JFrame {
 
 		this.setTitle("Calculadora Juros Compostos");
 		this.setSize(640, 480);
+	}
+
+	public JPanel getPnlForm() {
+
+		if (pnlForm == null) {
+
+			pnlForm = new JPanel();
+		}
+		return pnlForm;
+	}
+
+	public JPanel getPnlRodape() {
+
+		if (pnlRodape == null) {
+
+			pnlRodape = new JPanel();
+			
+			btnCalcular = new JButton("Calcular");
+			btnLimpar = new JButton("Limpar");
+			btnFechar = new JButton("Fechar");			
+		}
+
+		return pnlRodape;
 	}
 
 }
