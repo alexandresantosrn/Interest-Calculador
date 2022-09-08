@@ -41,7 +41,9 @@ public abstract class CalculatorForm extends JFrame {
 
 		this.setTitle("Calculadora Juros Compostos");
 		this.setSize(640, 480);
-		this.getContentPane().setLayout(new BorderLayout());
+		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Closing the program
+		
+		this.getContentPane().setLayout(new BorderLayout()); // Setting main layout
 		
 		this.getContentPane().add(getPnlRodape(), BorderLayout.PAGE_END);
 	}
