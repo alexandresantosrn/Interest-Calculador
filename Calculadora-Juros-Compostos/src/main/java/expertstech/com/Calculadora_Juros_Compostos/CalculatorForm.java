@@ -1,5 +1,6 @@
 package expertstech.com.Calculadora_Juros_Compostos;
 
+import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 
 import javax.swing.JButton;
@@ -40,6 +41,9 @@ public abstract class CalculatorForm extends JFrame {
 
 		this.setTitle("Calculadora Juros Compostos");
 		this.setSize(640, 480);
+		this.getContentPane().setLayout(new BorderLayout());
+		
+		this.getContentPane().add(getPnlRodape(), BorderLayout.PAGE_END);
 	}
 
 	public JPanel getPnlForm() {
@@ -48,6 +52,7 @@ public abstract class CalculatorForm extends JFrame {
 
 			pnlForm = new JPanel();
 		}
+		
 		return pnlForm;
 	}
 
@@ -56,11 +61,11 @@ public abstract class CalculatorForm extends JFrame {
 		if (pnlRodape == null) {
 
 			pnlRodape = new JPanel(new FlowLayout(FlowLayout.CENTER));
-			
+
 			btnCalcular = new JButton("Calcular");
 			btnLimpar = new JButton("Limpar");
-			btnFechar = new JButton("Fechar");		
-			
+			btnFechar = new JButton("Fechar");
+
 			pnlRodape.add(btnCalcular);
 			pnlRodape.add(btnLimpar);
 			pnlRodape.add(btnFechar);
